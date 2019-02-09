@@ -13,6 +13,8 @@ from myblog.blueprints.ckeditor_upload import upload_bp
 from myblog.extensions import bootstrap, db, login_manager, csrf, ckeditor, mail, moment, migrate, assets_env, css, js
 from flask_assets import Environment, Bundle
 
+basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+
 def create_app(config_name=None):
     if config_name is None:
         config_name = os.getenv("FLASK_CONFIG","development")
